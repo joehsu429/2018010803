@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         m8.put("img", R.drawable.kh);
         mylist.add(m8);
         lv = findViewById(R.id.listView);
-        MyAdapter adapter = new MyAdapter();
+        MyAdapter adapter = new MyAdapter(MainActivity.this,mylist,chks);//先放mylist再加MainActivity
         lv.setAdapter(adapter);
 
     }
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    ss MyAdapter extends BaseAdapter {
+    /*class MyAdapter extends BaseAdapter {
 
             @Override
             public int getCount() {
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 return v;
             }
 
-        }
+        }*/
 
 
     }
